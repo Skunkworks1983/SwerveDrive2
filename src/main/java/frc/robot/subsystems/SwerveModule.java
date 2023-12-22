@@ -30,9 +30,9 @@ public class SwerveModule extends SubsystemBase {
   // Constructor
   public SwerveModule(int driveMotorId, int turnMotorId, int turnEncoderId, double turnEncoderOffset) {
 
-    driveMotor = new TalonFX(driveMotorId);
+    driveMotor = new TalonFX(driveMotorId, "Canivore_1");
     turnMotor = new CANSparkMax(turnMotorId, MotorType.kBrushless);
-    turnEncoder = new CANCoder(turnEncoderId);
+    turnEncoder = new CANCoder(turnEncoderId, "Canivore_1");
 
     turnEncoder.configMagnetOffset(-turnEncoderOffset); // sets encoder so 0 is forward
     turnController.enableContinuousInput(-180, 180); // Pid controller will loop from -180 to 180 continuously
