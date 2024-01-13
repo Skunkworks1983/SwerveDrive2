@@ -53,7 +53,7 @@ public class Drivetrain extends SubsystemBase {
 
   public Drivetrain() {
 
-    gyro.calibrate();
+   /*  gyro.calibrate();
 
     while (gyro.isCalibrating()) {
       SmartDashboard.putBoolean("is calibrated", false);
@@ -62,8 +62,17 @@ public class Drivetrain extends SubsystemBase {
     SmartDashboard.putBoolean("is calibrated", true);
 
     gyro.reset();
+   */
 
+  }
+  public void calibrateGyro()
+  {
+    gyro.calibrate();
+  }
 
+  public void resetGyro()
+  {
+    gyro.reset();
   }
 
   public double getGyroAngle() {

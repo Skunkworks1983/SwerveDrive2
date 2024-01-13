@@ -81,7 +81,7 @@ public final class Constants {
 
   // Speeds
   public static final double MAX_MODULE_SPEED = 20 * FEET_TO_METERS; // used to be 10 - max speed that the module can go
-  public static final double OI_DRIVE_SPEED_RATIO = 15.0; // max speed input is 15 fps in direction
+  public static final double OI_DRIVE_SPEED_RATIO = 20.0; // max speed input is 20 fps in direction
   public static final double OI_TURN_SPEED_RATIO = 360;  // max turn input in 180 degrees per second
 
   

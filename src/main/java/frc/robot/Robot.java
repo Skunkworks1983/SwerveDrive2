@@ -37,7 +37,9 @@ public class Robot extends TimedRobot {
    * initialization code.
    */
   @Override
-  public void robotInit() {
+  public void robotInit() 
+  {
+    drivetrain.calibrateGyro();
     // Instantiate our RobotContainer. This will perform all our button bindings,
     // and put our
     // autonomous chooser on the dashboard.
@@ -95,7 +97,8 @@ public class Robot extends TimedRobot {
   }
 
   @Override
-  public void teleopInit() {
+  public void teleopInit() 
+  {
     // This makes sure that the autonomous stops running when
     // teleop starts running. If you want the autonomous to
     // continue until interrupted by another command, remove
@@ -105,6 +108,7 @@ public class Robot extends TimedRobot {
     }
 
     swerveteleop.schedule();
+    drivetrain.resetGyro();
   }
 
   /** This function is called periodically during operator control. */
